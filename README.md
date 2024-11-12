@@ -11,8 +11,8 @@ Run make all: This compiles the updated files in both the backend and grammar.
 Restart the Jupyter Kernel: This clears any cached dependencies and loads the latest changes.
 
 ## 2. Running Code with the Interpreter
-To test a new code snippet with the interpreter:
-Define the Code: Create a string variable containing your code. For example:
+Open the Worksheet jupyter note book, In a cell define the Code: Create a string variable containing your code. 
+For example:
 ```
 val code = "your_code_here"
 ```
