@@ -5,12 +5,12 @@ Follow these instructions to use the interpreter effectively:
 
 ## 1. Setup and Compilation
 If you make any changes to the backend code or grammar rules:
-
 Run make clean: This removes old compiled files.
 Run make all: This compiles the updated files in both the backend and grammar.
 Restart the Jupyter Kernel: This clears any cached dependencies and loads the latest changes.
 
 ## 2. Running Code with the Interpreter
+After downloading all the files you can start using the langauge.(DO NOT change the dependencies or the makefile will cease to work) 
 Open the Worksheet jupyter note book, In a cell define the Code: Create a string variable containing your code. 
 For example:
 ```
