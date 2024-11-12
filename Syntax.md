@@ -1,117 +1,187 @@
+### 1. **Basic Data Types**
 
-### 1. **String Multiplication**
-   - Multiplying a string by an integer repeats the string.
-   ```plaintext
-   strRepeat = "ha" * 3;  // Outputs: "hahaha"
-   ```
+- **None**: Represents a null or no-value state.
+  ```plaintext
+  x = None;
+  ```
 
-### 2. **Implicit Type Conversion in Expressions**
-   - When an integer or float is added to a string, it is automatically converted into a string.
-   ```plaintext
-   result = "Value is: " ++ 42;   // Outputs: "Value is: 42"
-   ```
+- **IntData, FloatData, DoubleData, and StringData**: Supports integer, float, double, and string types.
+  ```plaintext
+  x = 42;               // Integer
+  y = 3.14f;            // Float
+  z = 2.718;            // Double
+  str = "Hello World";  // String
+  ```
 
-### 3. **Ternary Operator**
-   - Implements a ternary conditional operator, enabling inline conditional expressions.
-   ```plaintext
-   x = 5 > 3 ? true : false;  // Outputs: true
-   ```
+- **BooleanData**: Represents boolean values `true` and `false`.
+  ```plaintext
+  flag = true;
+  ```
 
-### 4. **Array Length and Bounds Checking**
-   - Includes built-in functions to get the length of an array and ensures array bounds are checked during access and updates.
-   ```plaintext
-   arr = [1, 2, 3, 4, 5];
-   print("Length: " ++ len(arr));  // Outputs: Length: 5
-   arr[2] = 10;                    // Updates the third element
-   ```
+### 2. **Collections**
 
-### 5. **Traditional For Loop with Multiple Expressions**
-   - Supports traditional `for` loops with initialization, condition, and post-execution expressions.
-   ```plaintext
-   sum = 0;
-   for (i = 0; i < 10; i++) {
-       sum += i;
-   }
-   ```
+- **ArrayData**: Provides operations for creating arrays, accessing elements, updating values, and retrieving length.
+  ```plaintext
+  arr = [1, 2, 3, 4, 5];
+  print(arr);               // Prints array
+  print(arr[2]);            // Access third element (output: 3)
+  arr[1] = 10;              // Update second element to 10
+  print("Array length: " ++ len(arr));  // Output length (5)
+  ```
 
-### 6. **Function Definitions with Multiple Data Types**
-   - Function definitions and calls with parameters of different data types, allowing flexible arithmetic and string operations.
-   ```plaintext
-   function greet(name, count) {
-       message = "Hello, " ++ name ++ "!";
-       for (i = 1; i <= count; i++) {
-           print(message);
-       }
-   }
+- **SetData**: Includes functions to create sets, add elements, remove elements, and check for membership.
+  ```plaintext
+  mySet = {1, 2, 3};
+  addSet(mySet, 4);         // Adds 4 to the set
+  removeSet(mySet, 2);      // Removes 2 from the set
+  print(inSet(mySet, 3));   // Check if 3 is in the set (output: true)
+  ```
 
-   greet("Alice", 3);  // Outputs: Hello, Alice! (three times)
-   ```
+- **MapData**: Supports operations for creating maps, accessing values by key, updating values, and removing entries.
+  ```plaintext
+  myMap = {"a": 1, "b": 2};
+  print(myMap<"a">);         // Access value by key (output: 1)
+  myMap<"c"> = 3;            // Add or update a key-value pair
+  mapRemove(myMap, "b");     // Remove an entry by key
+  ```
 
-### 7. **Recursion**
-   - Functions support recursion, allowing them to call themselves.
-   ```plaintext
-   function factorial(n) {
-       if (n < 2) {
-           1;
-       } else {
-           n * factorial(n - 1);
-       }
-   }
+### 3. **Arithmetic Operations**
 
-   print(factorial(5));  // Outputs: 120
-   ```
+- **Basic Arithmetic**: Supports `+`, `-`, `*`, and `/` for integers, floats, and doubles.
+  ```plaintext
+  x = 5 + 3;    // Addition
+  y = 10 - 2;   // Subtraction
+  z = 4 * 2;    // Multiplication
+  w = 20 / 5;   // Division
+  ```
 
-### 8. **Concatenation Operator (++) for String Operations**
-   - Using `++` for string concatenation provides an intuitive way to join strings.
-   ```plaintext
-   greeting = "Hello" ++ " World";   // Outputs: "Hello World"
-   ```
+- **String Multiplication**: Multiplies a string by an integer, repeating the string.
+  ```plaintext
+  strRepeat = "woof " * 3;   // Output: "woof woof woof "
+  ```
 
-### 9. **Array, Set, and Map Operations**
-   - Extended support for array, set, and map operations such as insertion, deletion, containment checks, and accessing or updating values.
+### 4. **Comparison Operators**
 
-   - **Array Example**
-     ```plaintext
-     arr = [1, 2, 3];
-     print(arr[1]);        // Outputs: 2
-     arr[1] = 10;          // Updates the second element to 10
-     ```
+- **Relational Operators**: Includes `<`, `<=`, `>`, `>=`, `==`, and `!=` for comparisons.
+  ```plaintext
+  x = 10 < 20;      // Less than (output: true)
+  y = 15 <= 15;     // Less than or equal (output: true)
+  z = 5 > 2;        // Greater than (output: true)
+  isEqual = x == y; // Equality check (output: false)
+  notEqual = x != y; // Inequality check (output: true)
+  ```
 
-   - **Set Example**
-     ```plaintext
-     mySet = {1, 2, 3};
-     addSet(mySet, 4);     // Adds 4 to the set
-     print(inSet(mySet, 2));  // Outputs: true
-     ```
+### 5. **Control Flow**
 
-   - **Map Example**
-     ```plaintext
-     myMap = {"a": 1, "b": 2};
-     print(myMap<"a">);       // Outputs: 1
-     myMap<"c"> = 3;          // Adds key "c" with value 3
-     mapRemove(myMap, "b");   // Removes key "b"
-     ```
+- **If-Else Statement**: Supports conditional statements with `if-else` structure.
+  ```plaintext
+  if (x > 10) {
+      print("Greater than 10");
+  } else {
+      print("10 or less");
+  }
+  ```
 
-### 10. **Logical Operations in Comparison and Control Structures**
-   - Allows various logical and comparison operations within `if` conditions, loops, and expressions.
-   ```plaintext
-   x = 2 < 3 ? "Yes" : "No";   // Outputs: "Yes"
-   if (x == "Yes") {
-       print("x is less than 3");
-   }
-   ```
+- **While Loop**: Implements a `while` loop for repeated execution based on a condition.
+  ```plaintext
+  i = 0;
+  while (i < 5) {
+      print(i);
+      i += 1;
+  }
+  ```
 
-### 11. **Infix Increment (++) and Decrement (--) Operators**
-   - Allows using `++` and `--` with variables, supporting both prefix and postfix notation.
-   ```plaintext
-   count = 5;
-   count++;  // Increments count by 1
-   count--;  // Decrements count by 1
-   ```
+- **Range-Based For Loop**: Loop iterates over a range.
+  ```plaintext
+  sum = 0;
+  for (i in 1..5) {
+      sum += i;
+  }
+  print(sum); // Output: 15
+  ```
 
+- **Traditional For Loop**: Standard `for` loop with initialization, condition, and increment expressions.
+  ```plaintext
+  sum = 0;
+  for (i = 0; i < 5; i++) {
+      sum += i;
+  }
+  print(sum); // Output: 10
+  ```
 
+### 6. **Variables and Assignment**
 
+- **Basic Assignment**: Assigns a value to a variable.
+  ```plaintext
+  x = 10;
+  y = x + 5;
+  ```
 
+- **Infix Increment and Decrement**: `++` and `--` operations for incrementing and decrementing.
+  ```plaintext
+  count = 5;
+  count++;  // Increments count to 6
+  count--;  // Decrements count back to 5
+  ```
 
+### 7. **Function Declarations and Invocations**
 
+- **Declare and Call Functions**: Allows function definitions and calling with arguments.
+  ```plaintext
+  function greet(name, times) {
+      msg = "Hello, " ++ name;
+      for (i = 1; i <= times; i++) {
+          print(msg);
+      }
+  }
+  greet("Alice", 3);  // Outputs "Hello, Alice" three times
+  ```
 
+- **Recursive Function Calls**: Enables functions to call themselves.
+  ```plaintext
+  function factorial(n) {
+      if (n < 2) {
+          1;
+      } else {
+          n * factorial(n - 1);
+      }
+  }
+  print(factorial(5));  // Output: 120
+  ```
+
+### 8. **String Concatenation**
+
+- **Concatenation Operator**: `++` operator to combine strings.
+  ```plaintext
+  fullName = "First" ++ " " ++ "Last";
+  ```
+
+### 9. **Array and Map Manipulation**
+
+- **Array Operations**: Array creation, access, updating, and length checking.
+  ```plaintext
+  arr = [1, 2, 3, 4];
+  print(len(arr));     // Output: 4
+  arr[0] = 5;          // Updates first element to 5
+  ```
+
+- **Map Manipulation**: Access and update key-value pairs, remove entries, and retrieve values.
+  ```plaintext
+  myMap = {"a": 1, "b": 2};
+  myMap<"c"> = 3;        // Adds key "c"
+  mapRemove(myMap, "a"); // Removes key "a"
+  ```
+
+### 10. **Ternary Operator**
+
+- **Inline Conditional Evaluation**: Evaluates expressions based on conditions.
+  ```plaintext
+  result = (5 > 3) ? "Yes" : "No"; // Outputs: "Yes"
+  ```
+
+### 11. **Complex Expressions and Implicit Type Conversions**
+
+- **Automatic String Conversion in Expressions**: Automatically converts data to a string when combined with a string.
+  ```plaintext
+  result = "Result is: " ++ 5;   // Output: "Result is: 5"
+  ```
