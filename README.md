@@ -1,27 +1,52 @@
+# 🛠️ Custom Interpreter Notebook
 
-# Instructions for Using the Custom Interpreter Notebook
-This notebook contains a custom interpreter for a functional programming language that combines features from both modern and traditional programming languages. It’s built with a custom parser using ANTLR, and the backend lexer and analyzer are implemented in Kotlin.
-Follow these instructions to use the interpreter effectively:
+This notebook features a custom interpreter for a functional programming language inspired by both modern and traditional programming languages. The interpreter includes a custom parser created with ANTLR, with a backend lexer and analyzer implemented in Kotlin. Follow these steps to set up and use the interpreter effectively.
 
-## 1. Setup and Compilation
-If you make any changes to the backend code or grammar rules:
-Run make clean: This removes old compiled files.
-Run make all: This compiles the updated files in both the backend and grammar.
-Restart the Jupyter Kernel: This clears any cached dependencies and loads the latest changes.
+## 📑 Table of Contents
+- [⚙️ Setup and Compilation](#-setup-and-compilation)
+- [▶️ Running Code with the Interpreter](#-running-code-with-the-interpreter)
+- [👀 Improving Result Visibility](#-improving-result-visibility)
+- [📜 Syntax Guide](#-syntax-guide)
+- [🔗 Summary](#-summary)
 
-## 2. Running Code with the Interpreter
-After downloading all the files you can start using the langauge.(DO NOT change the dependencies or the makefile will cease to work) 
-Open the Worksheet jupyter note book, In a cell define the Code: Create a string variable containing your code. 
-For example:
-```
-val code = "your_code_here"
-```
-Execute the Code: Pass the string variable to the execute function:
-```
-execute(code)
-```
-The result will display in the notebook output, allowing you to see the interpreter's response to the code.
+## ⚙️ Setup and Compilation
 
-## 3. Improving Result Visibility
-To view results more clearly, create a new cell for each new code execution. This keeps outputs separated, making it easier to compare and analyze different runs.
-Summary
+If you make any changes to the backend code or grammar rules, follow these steps to recompile:
+
+1. **Clean Old Files**: Run `make clean` to remove old compiled files.
+2. **Compile Updated Files**: Run `make all` to compile the updated backend and grammar files.
+3. **Restart the Jupyter Kernel**: Clear any cached dependencies and load the latest changes by restarting the Jupyter kernel.
+
+## ▶️ Running Code with the Interpreter
+
+To start using the interpreter:
+
+1. **Download the Required Files**: Ensure all necessary files are downloaded and in the correct directories.
+   > **Note**: Do not change dependencies or the `makefile` functionality may break.
+   
+2. **Open the Jupyter Notebook**: Use the provided worksheet notebook.
+
+3. **Define the Code**: In a notebook cell, define a string variable with your code, like this:
+   ```kotlin
+   val code = "your_code_here"
+   ```
+
+4. **Execute the Code**: Pass the string variable to the `execute` function:
+   ```kotlin
+   execute(code)
+   ```
+   The output will display in the notebook, showing the interpreter's response to the code.
+
+## 👀 Improving Result Visibility
+
+To make results clearer and easier to analyze:
+
+- **Separate Outputs**: Create a new cell for each code execution. This keeps outputs separate, allowing you to easily compare and analyze different runs.
+
+## 📜 Syntax Guide
+
+For detailed information on language syntax, refer to the [Syntax Guide](./Syntax.md).
+
+## 🔗 Summary
+
+This notebook provides a straightforward interface to experiment with a functional programming language interpreter. By following these instructions, you can set up the interpreter, run custom code, and improve output readability for enhanced analysis.
