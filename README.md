@@ -1,4 +1,4 @@
-# 🛠️ Custom Interpreter Notebook
+# 🛠️ Custom Interpreter 
 
 This notebook features a custom interpreter for a functional programming language inspired by both modern and traditional programming languages. The interpreter includes a custom parser created with ANTLR, with a backend lexer and analyzer implemented in Kotlin. Follow these steps to set up and use the interpreter effectively.
 
@@ -46,7 +46,3 @@ To make results clearer and easier to analyze:
 ## 📜 Syntax Guide
 
 For detailed information on language syntax, refer to the [Syntax Guide](./Syntax.md).
-
-## 🔗 Summary
-
-This notebook provides a straightforward interface to experiment with a functional programming language interpreter. By following these instructions, you can set up the interpreter, run custom code, and improve output readability for enhanced analysis.
